@@ -34,7 +34,7 @@ def load_data(dataset_path: Path):
             img = cv2.imread(img, 1)
             img = cv2.resize(img, (IMG_HEIGHT, IMG_WIDTH))
             img = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX, dtype=cv2.CV_32F)
-            images.append(img)
+            images.append(img) #la i img et la i label dict....
             labels.append(label)
 
 
