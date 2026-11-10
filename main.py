@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split # type: ignore[import-untyp
 
 dataset_path = Path("assets")
 model_save_filepath = "model.keras"
-TEST_SIZE = 1
+TEST_SIZE = 20
 EPOCHS = 10
 
 images,labels = samva.load_data(dataset_path)

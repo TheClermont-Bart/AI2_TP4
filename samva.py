@@ -43,7 +43,7 @@ def get_model() -> tf.keras.Model:
     ])
 
     model.compile(
-        optimizer="adam", # Methode qui ajuste les poirds apres chaque erreur
+        optimizer="adam", # Methode qui ajuste les poids apres chaque erreur
         loss="categorical_crossentropy", # Mesure d'erreur que l'optimiseur cherche a diminuer
         metrics=["accuracy"],
     )
