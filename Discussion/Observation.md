@@ -79,7 +79,7 @@ Resultat de pécision pas plus haut que 0.3914 et loss : 0.0206
 
 *Test 1;*
 
-Utilisation de deux Conv2D avec un a 32 et l'autre au double avec les deux activation Relu
+Utilisation de deux Conv2D avec un a 32(Exemple de documentation) et l'autre au double avec les deux activation Relu
 
 ```python
 pool_size = (2,2)
@@ -324,6 +324,13 @@ loss="categorical_crossentropy"
 
 Rajouter un encore plus gros TEST_SIZE. Précision de 0.9913 et perte la plus haut de 1.1070.
 ![n'importe quoi](Result12.png)
+
+***Conclusion***
+
+Les tests montrent qu’un réseau sans convolution (Test 0) reste faible(39 %). Dès qu’on ajoute Conv2D et MaxPooling2D, la précision dépasse 97 %.
+La configuration la plus efficace est deux Conv2D (32 puis 64), un pooling (2, 2), la perte categorical_crossentropy et un Dropout de 0,25. 
+Avec un TEST_SIZE plus grand (Test 12), on atteint environ 99,1 % de précision. 
+Un pooling trop grand (3×3 ou 4×4), un Dropout trop élevé (0,75) ou trop de couches Conv2D dégradent les résultats, voire font planter le modèle.
 
 *Autre observation:*
 - Beaucoup plus lent a l'ecole que a la maison.
